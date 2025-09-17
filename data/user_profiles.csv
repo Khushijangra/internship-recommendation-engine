@@ -1,0 +1,51 @@
+UserID,Name,EducationLevel,Skills,SectorInterests,PreferredLocation,PreferredMode,LanguagePreference,ExperienceLevel
+STU0001,Pooja Singh,12th Pass,"Process Simulation, Safety Protocols, Report Writing","Oil, Gas & Energy",Delhi,Online,English,0–6 Months
+STU0002,Vikram Kumar,12th Pass,"Basic Html, Communication, Ms Office","Education, Media & Entertainment",Kolkata,Online,Hindi,Fresher
+STU0003,Chandra Sharma,12th Pass,"Autocad, Farm Surveys, Field Research",Agriculture & Allied,Kolkata,Offline,Hindi,Fresher
+STU0004,Anjali Bose,UG,"Sql, Cd, React, Html, Public Speaking",IT & Software / Tech;Agriculture & Allied,Bhopal,Offline,Hindi,0–6 Months
+STU0005,Karthik Gupta,12th Pass,"Data Analysis, Energy Modelling, Process Simulation","Oil, Gas & Energy",Kolkata,Offline,Hindi,Fresher
+STU0006,Shreya Gupta,PG,"Wireframing, Communication, Excel, Jira",Banking & Financial Services,Chennai,Online,English,Fresher
+STU0007,Meera Gowda,12th Pass,"Pandas, Sql, React",IT & Software / Tech;Telecom / Retail / Consumer Durables / Misc,Jaipur,Online,English,Fresher
+STU0008,Saurav Sharma,Diploma,"Inspection Protocols, Microcontrollers, C, C++, Six Sigma Basics, Public Speaking",Automotive,Pune,Online,Hindi,Fresher
+STU0009,Abdul Bose,12th Pass,"Troubleshooting, Reports, Excel",Telecom / Retail / Misc,Pune,Online,English,Fresher
+STU0010,Maya Nair,12th Pass,"Front Desk Operations, Customer Service, Report Writing",Travel & Hospitality,Chandigarh,Online,English,Fresher
+STU0011,Vikram Desai,PG,"Inspection Protocols, Ms Office, Git, C++, Six Sigma Basics, Problem Solving",Automotive,Hyderabad,Online,Hindi,Fresher
+STU0012,Anjali Reddy,UG,"User Research, Basic Html, Product Testing, Script Writing, Communication","Education, Media & Entertainment",Chennai,Online,Tamil,6–12 Months
+STU0013,Maya Iyer,PG,"Report Writing, Communication, Lab Assistance, Ms Office",Healthcare,Jaipur,Hybrid,English,Fresher
+STU0014,Nikhil Kumar,Diploma,"Matlab, Energy Modelling, Measurement Tools, Field Survey, Writing","Oil, Gas & Energy","Ukhrul, Manipur",Online,Hindi,0–6 Months
+STU0015,Neha Trivedi,UG,"Crop Monitoring, Data Recording, Field Research, Basic Lab Work, Teamwork",Agriculture & Allied,Chennai,Offline,English,Fresher
+STU0016,Imran Singh,Diploma,"User Research, Adobe Premiere, Report Writing, Excel, Writing","Education, Media & Entertainment;IT & Software / Tech",Bengaluru,Online,English,6–12 Months
+STU0017,Deepa Gupta,Diploma,"Safety, Production Planning, Teamwork",Manufacturing & Industrial / Metals & Mining,Mumbai,Hybrid,Hindi,Fresher
+STU0018,Pooja Acharya,Diploma,"Excel, Cad, Troubleshooting, Data Analysis, Ms Office, Writing",Manufacturing & Industrial / Metals & Mining,Delhi,Online,English,Fresher
+STU0019,Kavya Gowda,UG,"Project Management, Sales, Solidworks, Networking, Teamwork",Telecom / Retail / Consumer Durables / Misc;Telecom / Retail / Misc,"Palghar, Maharashtra",Offline,English,0–6 Months
+STU0020,Amit Sharma,UG,"Data Analysis, Report Writing, Process Simulation, Energy Modelling, Writing","Oil, Gas & Energy;Agriculture & Allied",Jaipur,Online,Hindi,Fresher
+STU0021,Suman Kumar,UG,"Google Analytics, Content Writing, Report Writing, Excel, Communication",Travel & Hospitality,Hyderabad,Online,Hindi,Fresher
+STU0022,Kavya Singh,Diploma,"Order Management, Figma Basics, Reports, Troubleshooting, Problem Solving",Telecom / Retail / Misc,Bengaluru,Online,Tamil,Fresher
+STU0023,Rohan Singh,UG,"Autocad, Community Survey, Public Speaking",Healthcare,Bundi,Online,Hindi,Fresher
+STU0024,Kavya Kumar,UG,"Data Collection, Ms Office, Ethics Basics, Report Writing, Communication",Healthcare,Pune,Online,Hindi,Fresher
+STU0025,Rahul Naik,12th Pass,"Field Survey, Report Writing, Power Systems","Oil, Gas & Energy","Kalahandi, Odisha",Online,English,6–12 Months
+STU0026,Suman Sharma,PG,"Excel, Data Collection, Writing",Healthcare,Wardha,Online,English,Fresher
+STU0027,Vikram Nair,Diploma,"Energy Modelling, Power Systems, Matlab, Measurement Tools, Teamwork","Oil, Gas & Energy",Mumbai,Online,English,Fresher
+STU0028,Rakesh Trivedi,Diploma,"Sql, Linux, React, Python, Writing",IT & Software / Tech,Kolkata,Hybrid,Hindi,0–6 Months
+STU0029,Manoj Menon,UG,"Content Writing, Basic Html, Adobe Premiere, Ms Office, Script Writing, Problem Solving","Education, Media & Entertainment",Bengaluru,Hybrid,English,Fresher
+STU0030,Vikram Patel,PG,"Accounting, Jira, Teamwork",Banking & Financial Services;Telecom / Retail / Consumer Durables / Misc,Patna,Offline,Hindi,6–12 Months
+STU0031,Laxmi Acharya,Diploma,"Figma Basics, Troubleshooting, Writing",Telecom / Retail / Misc,Barpeta,Offline,English,0–6 Months
+STU0032,Kavya Desai,Diploma,"Finance, Wireframing, Risk Analysis, Sql, Teamwork",Banking & Financial Services;Telecom / Retail / Misc,Pune,Hybrid,Hindi,0–6 Months
+STU0033,Rohan Nair,PG,"Cad, Excel, Teamwork",Automotive;Banking & Financial Services,Delhi,Hybrid,Hindi,6–12 Months
+STU0034,Vikram Gowda,UG,"Excel, Basic Lab Work, Communication",Agriculture & Allied;Telecom / Retail / Consumer Durables / Misc,Hyderabad,Offline,Hindi,Fresher
+STU0035,Sneha Nair,UG,"Communication, Social Media, Front Desk Operations, Event Planning, Google Analytics, Content Writing",Travel & Hospitality;Banking & Financial Services,Jaipur,Offline,Hindi,Fresher
+STU0036,Rahul Das,12th Pass,"Six Sigma Basics, Pcb Basics, Ms Office",Automotive,Koraput,Online,English,0–6 Months
+STU0037,Rakesh Bose,PG,"Ethics Basics, Lab Assistance, Patient Care, Teamwork",Healthcare;Travel & Hospitality,Ranchi,Online,English,Fresher
+STU0038,Imran Khan,PG,"Ms Office, Data Entry, Lab Assistance, Community Survey, Teamwork",Healthcare;IT & Software / Tech,Guwahati,Hybrid,English,Fresher
+STU0039,Anjali Khan,UG,"Finance, Tally, Communication, Risk Analysis",Banking & Financial Services;Agriculture & Allied,Mumbai,Online,Hindi,Fresher
+STU0040,Arjun Gowda,UG,"Jira, Product Research, Excel, Tally, Problem Solving",Banking & Financial Services,Bengaluru,Online,Tamil,Fresher
+STU0041,Abdul Patel,12th Pass,"Css, Html, Ms Office",Telecom / Retail / Consumer Durables / Misc,Hyderabad,Offline,English,Fresher
+STU0042,Radhika Bose,UG,"Report Writing, Seo, Communication, Social Media, Surveys, Front Desk Operations",Travel & Hospitality,Chennai,Hybrid,English,0–6 Months
+STU0043,Priya Patel,PG,"Community Survey, Communication, Ms Office, Local Language, Report Writing",Healthcare,Raipur,Offline,English,Fresher
+STU0044,Siddharth Iyer,UG,"Html, Css, Docker, Teamwork",IT & Software / Tech;Telecom / Retail / Misc,Delhi,Online,English,Fresher
+STU0045,Laxmi Singh,UG,"Report Writing, Communication, Seo, Content Writing, Surveys",Travel & Hospitality,"Ganjam, Odisha",Offline,Hindi,0–6 Months
+STU0046,Priya Singh,UG,"Sample Collection, Field Research, Report Writing, Crop Monitoring, Ms Office, Communication",Agriculture & Allied,Lucknow,Offline,English,Fresher
+STU0047,Manoj Iyer,PG,"Lean Principles, Troubleshooting, Reporting, Writing",Manufacturing & Industrial / Metals & Mining,Mumbai,Offline,Hindi,Fresher
+STU0048,Pradeep Gupta,UG,"Script Writing, Education Research, Product Testing, Basic Html, Communication, User Research","Education, Media & Entertainment",Jaipur,Hybrid,Hindi,Fresher
+STU0049,Pooja Sharma,UG,"Troubleshooting, Order Management, Excel, Linux Basics, Teamwork",Telecom / Retail / Misc,Khandwa,Hybrid,Hindi,Fresher
+STU0050,Shreya Khan,UG,"Power Systems, Process Simulation, Measurement Tools, Data Analysis, Matlab, Writing","Oil, Gas & Energy",Sehore,Offline,English,Fresher
