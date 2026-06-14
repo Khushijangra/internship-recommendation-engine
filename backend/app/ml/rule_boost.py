@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import os
 import sys
-from typing import Dict
+from typing import Dict, Set, List
 
 import pandas as pd
 
@@ -85,6 +85,120 @@ def normalize_rule_boost(score: float, max_score: float = 3.0) -> float:
     
     normalized = score / max_score
     return min(max(normalized, 0.0), 1.0)
+
+
+def compute_skill_overlap_score(user_skills: Set[str], internship_skills: Set[str]) -> float:
+    """Return user-recall style overlap score: |intersection| / max(|user_skills|, 1).
+
+    Ensures a float between 0.0 and 1.0.
+    """
+    if not isinstance(user_skills, set):
+        user_skills = set(user_skills or [])
+    if not isinstance(internship_skills, set):
+        internship_skills = set(internship_skills or [])
+    if not user_skills:
+        return 0.0
+    overlap = user_skills.intersection(internship_skills)
+    score = len(overlap) / max(len(user_skills), 1)
+    return float(max(0.0, min(1.0, score)))
+
+
+def compute_location_score(user_city: str, user_state: str, internship_city: str, internship_state: str, remote: bool) -> float:
+    """Score location proximity per spec.
+
+    - Same city: 1.0
+    - Same state: 0.7
+    - Remote allowed: 0.6
+    - Otherwise: 0.3
+    """
+    uc = (user_city or "").strip().lower()
+    us = (user_state or "").strip().lower()
+    ic = (internship_city or "").strip().lower()
+    is_ = (internship_state or "").strip().lower()
+
+    if uc and ic and uc == ic:
+        return 1.0
+    if us and is_ and us == is_:
+        return 0.8
+    # Nearby state heuristic: simple overlap by first 3 chars (very lightweight proxy)
+    if us and is_ and us[:3] == is_[:3]:
+        return 0.5
+    if remote:
+        return 0.7
+    return 0.3
+
+
+def compute_education_sector_boost(user_edu: str, user_sector: str, internship_edu: str, internship_sector: str) -> float:
+    """Small additive boost (max 0.1):
+    +0.05 if education level matches or exceeds requirement, +0.05 if sector interest matches.
+    Result clamped to [0.0, 1.0].
+    """
+    level_order = {
+        "illiterate": 0,
+        "basic": 1,
+        "middle": 2,
+        "high school": 3,
+        "10th pass": 3,
+        "12th pass": 4,
+        "diploma": 5,
+        "certificate": 5,
+        "ug": 6,
+        "pg": 7,
+        "phd": 8,
+    }
+
+    def _rank(v: str) -> int:
+        key = (v or "").strip().lower()
+        return level_order.get(key, 0)
+
+    boost = 0.0
+    if _rank(user_edu) >= _rank(internship_edu):
+        boost += 0.05
+
+    if user_sector and internship_sector and str(user_sector).strip().lower() == str(internship_sector).strip().lower():
+        boost += 0.05
+
+    return float(max(0.0, min(1.0, boost)))
+
+
+def apply_rural_boost(user_is_rural: bool, internship_row: Dict | None = None) -> float:
+    """Apply small rural boost when user is rural and internship suits rural/government context.
+
+    Detection is heuristic: sector or tags include 'government', 'rural', 'ngo', 'public'.
+    """
+    if not user_is_rural:
+        return 0.0
+    row = internship_row or {}
+    fields: List[str] = [
+        str(row.get("Sector", "")),
+        str(row.get("Tags", "")),
+        str(row.get("Organisation", "")),
+        str(row.get("CompanyName", "")),
+        str(row.get("Title", "")),
+    ]
+    text = " ".join(fields).lower()
+    if any(k in text for k in ["government", "rural", "ngo", "public sector", "govt"]):
+        return 0.05
+    return 0.0
+
+
+def diversity_penalty(selected: List[Dict], candidate: Dict) -> float:
+    """Return a small negative penalty if candidate duplicates title/sector/org in selected."""
+    cand_title = str(candidate.get("Title", "")).strip().lower()
+    cand_sector = str(candidate.get("Sector", "")).strip().lower()
+    cand_org = str(candidate.get("CompanyName") or candidate.get("Organisation") or "").strip().lower()
+
+    for s in selected:
+        st = str(s.get("Title", "")).strip().lower()
+        ss = str(s.get("Sector", "")).strip().lower()
+        so = str(s.get("CompanyName") or s.get("Organisation") or "").strip().lower()
+        if cand_title and st and cand_title == st:
+            return -0.05
+        if cand_sector and ss and cand_sector == ss:
+            return -0.03
+        if cand_org and so and cand_org == so:
+            return -0.02
+    return 0.0
 
 
 if __name__ == "__main__":

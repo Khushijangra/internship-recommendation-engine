@@ -189,6 +189,20 @@ alwaysApply: true
 - All code in modular folders (`frontend`, `backend`, `models`, `data`, `docs`)
 
 
+Always ensure that any shell command, PowerShell command, or script execution (e.g. npm run dev, python filename.py) is:
 
+Run automatically after being generated or written to the file system.
+
+Not left hanging or awaiting manual confirmation.
+
+If the script hangs, automatically debug the issue, print the error, and re-run the fixed command.
+
+If file path or working directory is wrong, fix and re-execute without waiting for user intervention.
+
+Do not pause after generating a command — continue execution or analysis immediately.
+
+If a command is written (e.g., in the terminal), ensure the environment is set up correctly (directory, file, ports) and that the script runs to completion or exits with an actionable error.
+
+If any subprocess fails, diagnose, fix, and retry automatically.
 
 
