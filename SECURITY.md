@@ -48,22 +48,41 @@ To report a security vulnerability responsibly:
 
 ---
 
-## Known Security Considerations
+## Resolved Security Issues
 
-### Admin Token (Hardcoded Default)
+### ✅ Admin Token — Fixed (commit `ac57cc8` + credential cleanup commit)
 
-**Issue:** The `/upload-internships` endpoint currently uses `"sih2025"` as the default admin token in the source code.
+**Issue was:** The `/upload-internships` endpoint had `"sih2025"` hardcoded as the admin token.
 
-**Mitigation (before production):**
-```python
-# In backend/app/main.py, replace the hardcoded token check with:
-import os
-ADMIN_TOKEN = os.getenv("ADMIN_TOKEN", "")
-if admin_token != ADMIN_TOKEN or not ADMIN_TOKEN:
-    raise HTTPException(status_code=403, detail="Access denied.")
+**Resolution:**
+- `ADMIN_TOKEN` is now loaded exclusively via `os.getenv("ADMIN_TOKEN", "")`
+- A module-level `logger.warning` fires at startup if `ADMIN_TOKEN` is unset
+- If unset, the endpoint returns HTTP 503 (disabled) rather than comparing against an empty string
+- If set but wrong token provided, returns HTTP 403
+- `python-dotenv` loads `backend/.env` automatically in local development
+- Set `ADMIN_TOKEN` in Railway environment variables for production
+
+```bash
+# Generate a secure token
+python -c "import secrets; print(secrets.token_urlsafe(32))"
+# → Add the output to backend/.env as: ADMIN_TOKEN=<output>
 ```
 
-And set `ADMIN_TOKEN` as an environment variable in Railway.
+### ✅ Firebase Credentials — Fixed (credential cleanup commit)
+
+**Issue was:** `frontend/src/lib/firebase.ts` used `|| "hardcoded-value"` fallbacks,
+exposing live Firebase API key, project ID, app ID, and sender ID in source code.
+
+**Resolution:**
+- All six Firebase config values now come exclusively from `import.meta.env.VITE_FIREBASE_*`
+- A startup guard checks for missing env vars and throws a descriptive error before
+  `initializeApp()` is ever called — no silent fallback possible
+- `frontend/.env.example` documents all required variables with descriptive placeholders
+- `frontend/.env` is blocked by `.gitignore`
+
+---
+
+## Remaining Considerations
 
 ### CORS Configuration
 
@@ -77,9 +96,9 @@ allow_origins=[
 ]
 ```
 
-### Firebase Auth
+### Firebase Auth — Server-Side Token Validation
 
-Firebase Authentication is handled client-side. The backend does not currently validate Firebase ID tokens on the `/recommendations` endpoint. For production with user-specific data, implement server-side token verification using `firebase-admin`.
+Firebase Authentication is handled client-side. The backend does not currently validate Firebase ID tokens on `/recommendations`. For production with user-specific data, implement server-side token verification using `firebase-admin`.
 
 ---
 

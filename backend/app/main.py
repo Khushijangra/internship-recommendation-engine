@@ -1,9 +1,35 @@
 from __future__ import annotations
 
+import logging
 import os
 import sys
 from pathlib import Path
 from typing import Dict, List
+
+from dotenv import load_dotenv
+
+# ---------------------------------------------------------------------------
+# Load environment variables from backend/.env (if present).
+# In production (Railway), variables are injected directly — load_dotenv is a
+# no-op when the file doesn't exist, so this is safe in all environments.
+# ---------------------------------------------------------------------------
+load_dotenv(dotenv_path=Path(__file__).resolve().parent.parent / ".env")
+
+logger = logging.getLogger(__name__)
+
+# ---------------------------------------------------------------------------
+# Admin token — MUST be set via environment variable.
+# Never hardcode this value in source code.
+# Set ADMIN_TOKEN in backend/.env (local) or Railway env vars (production).
+# ---------------------------------------------------------------------------
+ADMIN_TOKEN: str = os.getenv("ADMIN_TOKEN", "")
+
+if not ADMIN_TOKEN:
+    logger.warning(
+        "[SECURITY] ADMIN_TOKEN environment variable is not set. "
+        "The /upload-internships endpoint will reject ALL requests until this is configured. "
+        "See backend/.env.example for setup instructions."
+    )
 
 import pandas as pd
 from fastapi import FastAPI, File, HTTPException, Request, UploadFile
@@ -230,12 +256,18 @@ async def upload_internships(
 	Returns:
 		Success message
 	"""
-	# Simple security check
-	admin_token = request.headers.get("X-Admin-Token")
-	if admin_token != "sih2025":
+	# Security check — token must match ADMIN_TOKEN environment variable.
+	# If ADMIN_TOKEN is not configured, ALL upload requests are denied.
+	provided_token = request.headers.get("X-Admin-Token", "")
+	if not ADMIN_TOKEN:
+		raise HTTPException(
+			status_code=503,
+			detail="Upload endpoint is disabled: ADMIN_TOKEN environment variable is not configured."
+		)
+	if not provided_token or provided_token != ADMIN_TOKEN:
 		raise HTTPException(
 			status_code=403,
-			detail="Access denied. Admin token required."
+			detail="Access denied. Valid admin token required."
 		)
 	
 	# Check file type
