@@ -197,3 +197,17 @@ __marimo__/
 celerybeat-schedule
 celerybeat.pid
 *.sage.py
+
+# ==============================================================================
+# RUNTIME DATA — contains real user IDs and application records
+# ==============================================================================
+backend/data/applications.json
+backend/data/*.json
+
+# ==============================================================================
+# SUPABASE — environment variables
+# ==============================================================================
+# frontend/.env already covered above; ensure VITE_SUPABASE_* never committed
+
+# Archived debug files
+.archive/

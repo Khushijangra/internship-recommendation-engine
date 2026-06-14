@@ -1,0 +1,8 @@
+{
+	"machine learning": ["ml", "m learning"],
+	"data analysis": ["data analytics", "data analyst", "analysis"],
+	"frontend": ["web frontend", "front end"],
+	"backend": ["back end", "server side"],
+	"javascript": ["js"],
+	"python": ["py"]
+}

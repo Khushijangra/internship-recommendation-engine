@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  
+  /* Modern Government Color Scheme */
+  --background: #F9FAFB;
+  --foreground: #0F172A;
+  --card: #ffffff;
+  --card-foreground: #0F172A;
+  --popover: #ffffff;
+  --popover-foreground: #0F172A;
+  --primary: #FF9933;
+  --primary-foreground: #ffffff;
+  --secondary: #F0F4F8;
+  --secondary-foreground: #475569;
+  --muted: #F9FAFB;
+  --muted-foreground: #475569;
+  --accent: #F0F9FF;
+  --accent-foreground: #0F172A;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #E2E8F0;
+  --input: transparent;
+  --input-background: #ffffff;
+  --switch-background: #cbd5e1;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #FF9933;
+  --chart-1: #ff8c00;
+  --chart-1-foreground: #ffffff;
+  --chart-2: #2563eb;
+  --chart-2-foreground: #ffffff;
+  --chart-3: #059669;
+  --chart-3-foreground: #ffffff;
+  --chart-4: #dc2626;
+  --chart-4-foreground: #ffffff;
+  --chart-5: #7c3aed;
+  --chart-5-foreground: #ffffff;
+  --radius: 0.75rem;
+  --sidebar: #F9FAFB;
+  --sidebar-foreground: #0F172A;
+  --sidebar-primary: #FF9933;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #F0F4F8;
+  --sidebar-accent-foreground: #475569;
+  --sidebar-border: #E2E8F0;
+  --sidebar-ring: #FF9933;
+  
+  /* Government Colors - Updated for Modern Look */
+  --gov-orange: #FF9933;
+  --gov-white: #ffffff;
+  --gov-green: #138808;
+  --gov-blue: #1E40AF;
+  --gov-purple: #6366f1;
+  --gov-navy: #0F172A;
+  --gov-grey: #475569;
+  --gov-light-grey: #F0F4F8;
+  --saffron-light: #FFB366;
+  --green-light: #22c55e;
+  --blue-light: #3b82f6;
+  
+  /* Modern Gradients */
+  --gradient-saffron: linear-gradient(135deg, #FF9933 0%, #FFB366 100%);
+  --gradient-tricolor: linear-gradient(135deg, #FF9933 0%, #ffffff 50%, #138808 100%);
+  --gradient-saffron-green: linear-gradient(135deg, #FF9933 0%, #138808 100%);
+  --gradient-modern: linear-gradient(135deg, #1E40AF 0%, #3b82f6 100%);
+  --gradient-tricolor-vertical: linear-gradient(to bottom, #FF9933 0%, #ffffff 50%, #138808 100%);
+  --gradient-hero: linear-gradient(135deg, #FF9933 0%, #ffffff 30%, #138808 100%);
+}
+
+.dark {
+  --background: #0f172a;
+  --foreground: #f8fafc;
+  --card: #1e293b;
+  --card-foreground: #f8fafc;
+  --popover: #1e293b;
+  --popover-foreground: #f8fafc;
+  --primary: #3b82f6;
+  --primary-foreground: #ffffff;
+  --secondary: #334155;
+  --secondary-foreground: #f8fafc;
+  --muted: #1e293b;
+  --muted-foreground: #cbd5e1;
+  --accent: #1e40af;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #475569;
+  --input: #334155;
+  --ring: #3b82f6;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: #fb923c;
+  --chart-2: #60a5fa;
+  --chart-3: #34d399;
+  --chart-4: #f87171;
+  --chart-5: #a78bfa;
+  --sidebar: #1e293b;
+  --sidebar-foreground: #f8fafc;
+  --sidebar-primary: #3b82f6;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #334155;
+  --sidebar-accent-foreground: #f8fafc;
+  --sidebar-border: #475569;
+  --sidebar-ring: #3b82f6;
+  --gov-orange: #fb923c;
+  --gov-white: #f8fafc;
+  --gov-green: #22c55e;
+  --gov-blue: #3b82f6;
+  --gov-purple: #8b5cf6;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-1-foreground: var(--chart-1-foreground);
+  --color-chart-2: var(--chart-2);
+  --color-chart-2-foreground: var(--chart-2-foreground);
+  --color-chart-3: var(--chart-3);
+  --color-chart-3-foreground: var(--chart-3-foreground);
+  --color-chart-4: var(--chart-4);
+  --color-chart-4-foreground: var(--chart-4-foreground);
+  --color-chart-5: var(--chart-5);
+  --color-chart-5-foreground: var(--chart-5-foreground);
+  --color-gov-orange: var(--gov-orange);
+  --color-gov-white: var(--gov-white);
+  --color-gov-green: var(--gov-green);
+  --color-gov-blue: var(--gov-blue);
+  --color-gov-purple: var(--gov-purple);
+  --color-gov-navy: var(--gov-navy);
+  --color-gov-grey: var(--gov-grey);
+  --color-gov-light-grey: var(--gov-light-grey);
+  --color-saffron-light: var(--saffron-light);
+  --color-green-light: var(--green-light);
+  --color-blue-light: var(--blue-light);
+  --gradient-tricolor-vertical: var(--gradient-tricolor-vertical);
+  --gradient-hero: var(--gradient-hero);
+  --gradient-saffron-green: var(--gradient-saffron-green);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', 'system-ui', 'sans-serif';
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
