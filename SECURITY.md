@@ -1,4 +1,4 @@
-# Security Policy — InternMatch
+﻿# Security Policy — Intern Setu
 
 ## Supported Versions
 
@@ -15,7 +15,7 @@
 
 To report a security vulnerability responsibly:
 
-1. **Email:** Send details to `[your-email@domain.com]` with subject `[SECURITY] InternMatch Vulnerability`
+1. **Email:** Send details to `[your-email@domain.com]` with subject `[SECURITY] Intern Setu Vulnerability`
 2. **Include:**
    - Vulnerability description
    - Steps to reproduce

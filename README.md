@@ -1,6 +1,6 @@
-<div align="center">
+﻿<div align="center">
 
-# 🎯 InternMatch
+# 🎯 Intern Setu
 ### AI-Powered Internship Recommendation Engine
 
 *Hybrid NLP recommendation engine that matches students to internships using TF-IDF similarity, configurable rule boosting, explainable ranking, and fairness-aware reranking.*
@@ -28,7 +28,7 @@ Generic keyword search fails because:
 - Top results cluster around the same few organizations
 - No explanation of *why* an internship was recommended
 
-**InternMatch** solves this with a hybrid ML system that understands semantic relevance, geographic context, educational fit, and diversity — and explains every recommendation.
+**Intern Setu** solves this with a hybrid ML system that understands semantic relevance, geographic context, educational fit, and diversity — and explains every recommendation.
 
 ---
 
@@ -36,7 +36,7 @@ Generic keyword search fails because:
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
-│                         InternMatch System                              │
+│                         Intern Setu System                              │
 ├───────────────────────────┬─────────────────────────────────────────────┤
 │        FRONTEND           │              BACKEND                        │
 │   React + TypeScript      │         FastAPI (Python)                    │
@@ -186,7 +186,7 @@ Recruiters can verify the logic. Users understand *why* they were matched — no
 
 ## ⚖️ Fairness Design
 
-InternMatch is built for India's diverse student population:
+Intern Setu is built for India's diverse student population:
 
 | Mechanism | Purpose | Implementation |
 |-----------|---------|---------------|
@@ -236,7 +236,7 @@ if cache_key in _RESULT_CACHE:
 ## 📁 Project Structure
 
 ```
-internmatch/
+intern-setu/
 ├── README.md                         ← You are here
 ├── requirements.txt                  ← Python dependencies (pinned)
 ├── LICENSE
@@ -297,8 +297,8 @@ internmatch/
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/YOUR_USERNAME/internmatch.git
-cd internmatch
+git clone https://github.com/YOUR_USERNAME/intern-setu.git
+cd intern-setu
 
 # 2. Create virtual environment
 python -m venv .venv

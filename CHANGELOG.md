@@ -1,4 +1,4 @@
-# Changelog — InternMatch
+﻿# Changelog — Intern Setu
 
 All notable changes to this project are documented here.
 

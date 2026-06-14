@@ -1,6 +1,6 @@
-# Contributing to InternMatch
+﻿# Contributing to Intern Setu
 
-Thank you for your interest in contributing to InternMatch. This document outlines the process for contributing effectively.
+Thank you for your interest in contributing to Intern Setu. This document outlines the process for contributing effectively.
 
 ---
 
@@ -16,8 +16,8 @@ Thank you for your interest in contributing to InternMatch. This document outlin
 
 ```bash
 # Fork and clone
-git clone https://github.com/YOUR_USERNAME/internmatch.git
-cd internmatch
+git clone https://github.com/YOUR_USERNAME/intern-setu.git
+cd intern-setu
 
 # Backend setup
 python -m venv .venv

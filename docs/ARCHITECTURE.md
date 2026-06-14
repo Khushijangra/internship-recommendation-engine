@@ -1,8 +1,8 @@
-# System Architecture — InternMatch
+﻿# System Architecture — Intern Setu
 
 ## Overview
 
-InternMatch is a hybrid recommendation system combining TF-IDF semantic similarity with a multi-factor rule boosting engine. The system is designed for low-latency inference (<160ms cold, <1ms cached) at the scale of thousands of internship listings.
+Intern Setu is a hybrid recommendation system combining TF-IDF semantic similarity with a multi-factor rule boosting engine. The system is designed for low-latency inference (<160ms cold, <1ms cached) at the scale of thousands of internship listings.
 
 ---
 
@@ -10,7 +10,7 @@ InternMatch is a hybrid recommendation system combining TF-IDF semantic similari
 
 ```
 ┌──────────────────────────────────────────────────────────────────────────────┐
-│                              InternMatch Backend                             │
+│                              Intern Setu Backend                             │
 │                                                                              │
 │  POST /recommendations                                                       │
 │         │                                                                    │
