@@ -589,7 +589,7 @@ function AppContent() {
         internship_title: internship.Title || 'Unknown Title',
         organization: internship.Organisation || 'Unknown Organization',
         status: 'applied' as const,
-        notes: 'Applied through InternMatch'
+        notes: 'Applied through Intern Setu'
       };
 
       // Use the applications context to save to Supabase
@@ -1017,7 +1017,7 @@ function AppContent() {
               Guidelines
             </h1>
             <p className="text-white/80 text-lg">
-              Complete guide for using InternMatch
+              Complete guide for using Intern Setu
             </p>
           </div>
         </div>
@@ -1224,7 +1224,7 @@ function AppContent() {
                     <div className="space-y-3 mb-8">
                       
                       <p className="text-[#475569] font-medium">
-                        InternMatch • SIH 2025 • Government of
+                        Intern Setu • SIH 2025 • Government of
                         India
                       </p>
                     </div>
@@ -1633,7 +1633,7 @@ function AppContent() {
               </span>
               <span className="block text-4xl lg:text-5xl font-bold">
                 <span className="bg-gradient-to-r from-[#FF9933] via-[#1E40AF] to-[#138808] bg-clip-text text-transparent">
-                  InternMatch?
+                  Intern Setu?
                 </span>
               </span>
             </h2>
@@ -2450,7 +2450,7 @@ function AppContent() {
               Matching?
             </h2>
             <p className="text-white/90 mb-8 max-w-2xl mx-auto text-lg">
-              Join InternMatch and let AI find your perfect
+              Join Intern Setu and let AI find your perfect
               internship opportunity
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -2493,7 +2493,7 @@ function AppContent() {
               className="w-8 h-8"
             />
             <p className="text-[#475569] font-medium">
-              InternMatch • Developed under Smart India Hackathon 2025 • Digital India
+              Intern Setu • Developed under Smart India Hackathon 2025 • Digital India
             </p>
           </div>
           <p className="text-[#475569] text-sm">

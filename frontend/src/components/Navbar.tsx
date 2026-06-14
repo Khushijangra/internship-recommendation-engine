@@ -141,7 +141,7 @@ export function Navbar({
                 </div>
                 <div className="hidden sm:flex flex-col">
                   <span className="text-lg font-bold bg-gradient-to-r from-gov-orange to-gov-blue bg-clip-text text-transparent">
-                    InternMatch
+                    Intern Setu
                   </span>
                   <span className="text-xs text-gray-600">SIH 2025 • Government of India</span>
                 </div>

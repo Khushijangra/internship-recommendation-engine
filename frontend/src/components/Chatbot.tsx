@@ -22,7 +22,7 @@ export function Chatbot({ isOpen, onClose }: ChatbotProps) {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      text: 'Welcome to InternMatch! 🇮🇳 I\'m your AI assistant here to help you navigate our government internship platform. I can guide you through:\n\n• Creating your profile\n• Finding perfect internship matches\n• Understanding the application process\n• Career development tips\n\nHow can I assist you today?',
+      text: 'Welcome to Intern Setu! 🇮🇳 I\'m your AI assistant here to help you navigate our government internship platform. I can guide you through:\n\n• Creating your profile\n• Finding perfect internship matches\n• Understanding the application process\n• Career development tips\n\nHow can I assist you today?',
       sender: 'bot',
       timestamp: new Date(),
     },
@@ -72,10 +72,10 @@ export function Chatbot({ isOpen, onClose }: ChatbotProps) {
           messages: [
             {
               role: 'system',
-              content: `You are an AI assistant for the InternMatch, part of the Smart India Hackathon 2025 Government of India initiative to help students find relevant internships.
+              content: `You are an AI assistant for the Intern Setu, part of the Smart India Hackathon 2025 Government of India initiative to help students find relevant internships.
 
 Your role is to:
-1. Guide users through the internship application process on InternMatch
+1. Guide users through the internship application process on Intern Setu
 2. Help with profile creation and optimization for better recommendations
 3. Explain how our AI-powered matching system works
 4. Assist with understanding internship requirements and eligibility criteria

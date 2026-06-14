@@ -132,7 +132,7 @@ export function AuthModal({ isOpen, onClose, onLogin, onRegister }: AuthModalPro
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle>Welcome to InternMatch</DialogTitle>
+          <DialogTitle>Welcome to Intern Setu</DialogTitle>
           <DialogDescription>
             Sign in to your account or create a new one to get personalized internship recommendations.
           </DialogDescription>
