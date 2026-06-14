@@ -1,4 +1,4 @@
-import image_571cfe2b2c2ce6af0ecec4962c89220e529c5495 from 'figma:asset/571cfe2b2c2ce6af0ecec4962c89220e529c5495.png';
+﻿import image_571cfe2b2c2ce6af0ecec4962c89220e529c5495 from 'figma:asset/571cfe2b2c2ce6af0ecec4962c89220e529c5495.png';
 import React, { useState } from 'react';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
@@ -141,7 +141,7 @@ export function Navbar({
                 </div>
                 <div className="hidden sm:flex flex-col">
                   <span className="text-lg font-bold bg-gradient-to-r from-gov-orange to-gov-blue bg-clip-text text-transparent">
-                    Intern Setu Portal
+                    InternMatch
                   </span>
                   <span className="text-xs text-gray-600">SIH 2025 • Government of India</span>
                 </div>

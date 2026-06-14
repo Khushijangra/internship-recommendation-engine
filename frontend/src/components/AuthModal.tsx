@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from './ui/dialog';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
@@ -132,7 +132,7 @@ export function AuthModal({ isOpen, onClose, onLogin, onRegister }: AuthModalPro
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle>Welcome to Intern Setu Portal</DialogTitle>
+          <DialogTitle>Welcome to InternMatch</DialogTitle>
           <DialogDescription>
             Sign in to your account or create a new one to get personalized internship recommendations.
           </DialogDescription>
