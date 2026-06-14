@@ -211,3 +211,10 @@ backend/data/*.json
 
 # Archived debug files
 .archive/
+
+# ==============================================================================
+# IDE CONFIGURATION — internal only, never commit to public repos
+# ==============================================================================
+.cursor/
+.cursorignore
+.cursorindexingignore
